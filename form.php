@@ -9,12 +9,25 @@
     <title>Password Generator</title>
 </head>
 
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <h1 class="fs-3">Generate New Password by providing lenght</h1>
 
-<form action="password.php" method="GET">
-    <label for="passwordLength">Password Length</label>
-    <input type="number" name="passwordLength">
-    <button>Generate</button>
-</form>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+
+            <form action="password.php" method="GET">
+                <label for="passwordLength">Password Length:</label>
+                <input type="number" name="passwordLength">
+                <button>Generate</button>
+            </form>
+        </div>
+    </div>
+
+</div>
 
 <body>
 

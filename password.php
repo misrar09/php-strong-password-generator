@@ -2,29 +2,10 @@
 <html lang="en">
 
 <head>
-    <?php
-    //Method to create a new password from the user provided lenght
-    function randPassword($passLength)
-    {
+    <?php include __DIR__ . "/functions.php"; ?>
 
-        // All the characters strings which can be used in the password
-        $passwordCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!1234567890&.,$%()/';
-        $newPassword = ""; // set the empty varialbe for new password to be used below
-
-
-        //Loop to generate each character of the password
-        for ($i = 0; $i < $passLength; $i++) {
-
-            //get the random characters from the passowrd characters string above and append it to the new password
-            $randdomChar = $passwordCharacters[rand(0, strlen($passwordCharacters) - 1)];
-            $newPassword = $newPassword . $randdomChar;
-        }
-        // return the new generated password
-        return $newPassword;
-    }
-
-
-    ?>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password</title>
@@ -32,11 +13,17 @@
 </head>
 
 <body>
-
-
     <?php $generatedPassword = randPassword($_GET['passwordLength']); ?>
-    <h1>Here is your Password</h1>
-    <?php echo "<h2>" . "Password = " . $generatedPassword . "<h2>"; ?>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <h1>Here is your Password</h1>
+                <?php echo "<h2>" . "Password = " . $generatedPassword . "<h2>"; ?>
+
+            </div>
+        </div>
+    </div>
 
 
 </body>
