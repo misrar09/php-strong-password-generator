@@ -10,9 +10,10 @@
 </head>
 
 
-<form action="">
-    <label for="">Password Length</label>
-    <input type="number">
+<form action="password.php" method="GET">
+    <label for="passwordLength">Password Length</label>
+    <input type="number" name="passwordLength">
+    <button>Generate</button>
 </form>
 
 <body>
