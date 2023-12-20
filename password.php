@@ -20,7 +20,11 @@
             <div class="col">
                 <h1>Here is your Password</h1>
                 <?php echo "<h2>" . "Password = " . $generatedPassword . "<h2>"; ?>
-
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span><a href="http://localhost/php-strong-password-generator/form.php">Go Back</a></span>
+                </div>
             </div>
         </div>
     </div>
