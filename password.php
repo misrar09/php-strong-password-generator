@@ -13,13 +13,25 @@
 </head>
 
 <body>
+    <!--     <?php
+                if (isset($_GET["passwordLength"]) && !empty($_GET["passwordLength"])) {
+                    $generatedPassword = randPassword($_GET["passwordLength"]);
+                } else {
+                    $generatedPassword = "Error: Password length not specified or not in range.";
+                }
+                ?> -->
+
     <?php
-    if (isset($_GET["passwordLength"]) && !empty($_GET["passwordLength"])) {
+    if (($_GET["passwordLength"] > 7  && $_GET["passwordLength"] < 255)) {
         $generatedPassword = randPassword($_GET["passwordLength"]);
     } else {
-        $generatedPassword = "Error: Password length not specified.";
+        $generatedPassword = "Error: Password length out of range (8 - 255 characters).";
     }
     ?>
+
+
+
+
 
 
     <div class="container text-center">
