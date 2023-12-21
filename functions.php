@@ -3,7 +3,7 @@
 function randPassword($passLength)
 {
 
-    // All the characters strings which can be used in the password
+    // All the characters string which can be used in the password
     $passwordCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!1234567890&.,$%()/';
     $newPassword = ""; // set the empty varialbe for new password to be used below
 

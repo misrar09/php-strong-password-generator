@@ -13,13 +13,20 @@
 </head>
 
 <body>
-    <?php $generatedPassword = randPassword($_GET['passwordLength']); ?>
+    <?php
+    if (isset($_GET["passwordLength"]) && !empty($_GET["passwordLength"])) {
+        $generatedPassword = randPassword($_GET["passwordLength"]);
+    } else {
+        $generatedPassword = "Error: Password length not specified.";
+    }
+    ?>
+
 
     <div class="container text-center">
         <div class="row">
             <div class="col">
                 <h1>Here is your Password</h1>
-                <?php echo "<h2>" . "Password = " . $generatedPassword . "<h2>"; ?>
+                <?php echo "<h2>" . "Password = " . $generatedPassword . "</h2>"; ?>
             </div>
             <div class="row">
                 <div class="col">
